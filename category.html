@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="assets/css/all.min.css">
 	</head>
 	<body>
+
 		<nav class="main-nav d-lg-block" id="main-nav">
 			<div class="container">
 				<ul class="row align-content-center justify-content-space-between">
@@ -162,21 +163,64 @@
 				</div>  
 			</div>  
 		</div>
-
-		<!--		start hamad section (filter by)-->
-		<section class="filter-by row justify-content-flex-end align-items-center">
-			<span class="mb-1" onclick="sort_by()">الترتيب بحسب : </span>
-			<div class="filter-by-options mr-2">
-				<div class="select w-100">
-					<select class="w-100">
-						<option value="" selected="selected" disabled="disabled">الرجاء الاختيار</option>
-						<option value="2">حسب السعر</option>
-						<option value="3">حسب الاسم</option>
-					</select>
+    <!-- Start wafa -->
+    <div class="category-section">
+			<div class="container">
+				<ul class="breadcrumb d-flex">
+					<li><a href="index.html">الرئيسية</a></li>
+					<li><a href="#">الكتب العربية</a></li>
+					<li><a href="#">كتب إلكترونية</a></li>
+					<li>لأنك الله (كتاب إلكتروني)</li>
+				</ul>
+        <!-- End wafa -->
+		<!-- start Reem section  -->
+		<div class="row justify-content-center md-justify-content-space-between">
+			<div class="col-12 col-sm-6 col-md-3 col-lg-3 mb-2">
+				<div class="category-name">
+					<h4><img src="assets/imgs/green-book.svg" alt="icon" width="30">
+						كتاب إلكتروني
+					</h4>
+				</div>
+				<div class="filter-box">
+					<div class="filter-header p-1">تصفية النتائج</div>
+					<div idi="filter-accordion" class="filter-accordion">
+						<div class="accordion-item close">
+							<div class="accordion-header d-flex justify-content-space-between" id="headingOne">
+								<span>علامة تجارية</span>
+								<span class="fa fa-plus fs-sm"></span>
+							</div>
+							<div class="accordion-content">
+								Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, velit?
+							</div>
+						</div>
+						<div class="accordion-item open">
+							<div class="accordion-header d-flex justify-content-space-between" id="headingOne">
+								<span>السعر</span>
+								<span class="fa fa-minus fs-sm"></span>
+							</div>
+							<div class="accordion-content">
+								<input type="range" name="filterPrice" id="">
+								<div class="range-sides d-flex justify-content-space-between">
+									<span class="start">0ر.س</span>
+									<span class="end">150ر.س</span>
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item close">
+							<div class="accordion-header d-flex justify-content-space-between" id="headingOne">
+								<span>صيغة الكتاب</span>
+								<span class="fa fa-plus fs-sm"></span>
+							</div>
+							<div class="accordion-content">
+								Lorem ipsum dolor sit amet.
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-		</section>
-		<!--		end  hamad section (filter by)-->
+			</div>
+
+			<!-- end Reem section -->
 		<footer class="mt-2">
 			<div class="container mb-2">
 				<div class="flex-col md-dir-row justify-content-space-between">
