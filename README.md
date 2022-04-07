@@ -4,7 +4,9 @@ https://abrar-abdulwahed.github.io/github-team/
 
 ##
 
-Team: Abrar, Afnan, Reem, Hama, Wafa. <br/># Afnan
+Team: Abrar, Afnan, Reem, Hama, Wafa. <br/>
+
+# Afnan
 
 1- Header of index.<br/> 2- Content of category page
 
