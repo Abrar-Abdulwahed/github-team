@@ -1,15 +1,971 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html dir="rtl" lang="ar">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Jarir - Elib</title>
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/css/all.min.css">
+        <link rel="stylesheet" href="assets/css/style.css" />
+		    <link rel="stylesheet" href="assets/css/all.min.css">
     </head>
     <body>
-<!--start wafa -->
+     <!-- By: Afnan  -->
+     <nav class="main-nav d-lg-block" id="main-nav">
+        <div class="container">
+            <ul class="row align-content-center justify-content-space-between">
+                <li>
+                    <img src="assets/imgs/register.svg">
+                    <b>
+                        <span onclick="openModal('signup-login-modal', 'loginForm')">
+                            ادخل لحسابك
+                        </span>
+                        أو
+                        <span onclick="openModal('signup-login-modal', 'signupForm')">
+                            سجل الآن
+                        </span>
+                    </b>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/imgs/main.svg">
+                        الرئيسية
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/imgs/who.svg">
+                        من نحن
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/imgs/warranty.svg">
+                        اتصل بنا
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/imgs/help.svg">
+                        المساعدة
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/imgs/privacy.svg">
+                        سياسة الخصوصية
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/imgs/saudi.svg">
+                        YER اليمن
+                    </a>
+                </li>
+                <li class="change-language">
+                    <a href="#">
+                        <span>English</span>
+                        <img src="assets/imgs/language.svg">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="signup-login-modal" class="modal">
+        <div id="signup-login-modal-content" class="modal-content col-xs-9 col-sm-8 col-md-6 col-lg-4"></div>
+    </div>
+    <div id="top-header" class="top-header py-1 relative">  
+        <div class="container d-grid g-10">
+            <div class="toggle d-lg-none align-self-center">
+                <img src="assets/imgs/menubar.svg" alt="icon" width="20">
+            </div>
+            <nav class="mobile-nav d-none d-none d-lg-none">
+                <ul class="row align-content-center justify-content-space-between">
+                    <li>
+                        <img src="assets/imgs/register.svg">
+                        <b>
+                            <span onclick="openModal('signup-login-modal', 'loginForm')">
+                                ادخل لحسابك
+                            </span>
+                            أو
+                            <span onclick="openModal('signup-login-modal', 'signupForm')">
+                                سجل الآن
+                            </span>
+                        </b>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="assets/imgs/main.svg">
+                            الرئيسية
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="assets/imgs/who.svg">
+                            من نحن
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="assets/imgs/warranty.svg">
+                            اتصل بنا
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="assets/imgs/help.svg">
+                            المساعدة
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="assets/imgs/privacy.svg">
+                            سياسة الخصوصية
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="assets/imgs/saudi.svg">
+                            YER اليمن
+                        </a>
+                    </li>
+                    <li class="change-language">
+                        <a href="#">
+                            <span>English</span>
+                            <img src="assets/imgs/language.svg">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="text-align-center">
+                <a href="index.html" class="logo">
+                    <img src="assets/imgs/logo.png" alt="">
+                </a>
+            </div>
+            <form action="" class="d-flex">
+                <label for="header_search"></label>
+                <input
+                    onkeyup="search_book()"
+                    id="header_search"
+                    type="search"
+                    name="header_search"
+                    placeholder="البحث"
+                    class="w-100"
+                >
+                <button type="submit" name="header_search_submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <div class="text-align-center">
+                <a class="cart-btn" href="pages/cart.html">
+                    <img src="assets/imgs/cart.svg">
+                    <!-- <span class="cart-quantity" id="cart-quantity">0</span> -->
+                </a>
+            </div>  
+        </div>  
+    </div>
+    <div dir="ltr" class="slideshow-header">
+        <div class="container relative z-0">
+            <div class="slider">
+                <img class="slider-item" src="assets/imgs/sliders/slider1.jpg" style="display: block;">
+                <img class="slider-item" src="assets/imgs/sliders/slider2.jpg">
+                <img class="slider-item" src="assets/imgs/sliders/slider3.jpg">
+                <img class="slider-item" src="assets/imgs/sliders/slider4.jpg">
+                <img class="slider-item" src="assets/imgs/sliders/slider6.jpg">
+                <img class="slider-item" src="assets/imgs/sliders/slider7.jpg">
+            </div>
+            <div class="slider-controls">
+                <a id="arrow-left" onclick="plusSlides(-1)">❮</a>
+                <a id="arrow-right" onclick="plusSlides(1)">❯</a>
+            </div>
+            <div class="bullets">
+                <span class="indicator active" onclick="slideByDots(1)"></span>
+                <span class="indicator" onclick="slideByDots(2)"></span>
+                <span class="indicator" onclick="slideByDots(3)"></span>
+                <span class="indicator" onclick="slideByDots(4)"></span>
+                <span class="indicator" onclick="slideByDots(5)"></span>
+                <span class="indicator" onclick="slideByDots(6)"></span>
+            </div>
+        </div>
+    </div>
+    <!-- end afnan -->
+
+    <!-- By: Reem -->
+    <section class="category-section py-2 mt-2">
+    <div class="container">
+        <div class="section-top d-flex align-items-baseline justify-content-space-between">
+            <h2 class="h3 mb-1">تصفح حسب القسم</h2>
+            <a href="./category.html">عرض الكل</a>
+        </div>
+        <div class="section-content d-flex">
+            <button class="next-btn">
+                <img src="./assets/imgs/arrowNext.svg" alt="" width="30" class="arrow" onclick="oneStepSlider('scrolled', 'next', 0)" style="margin-top: -20px">
+            </button> 
+            <div class="d-flex scrolled gx-20 py-2">
+                <a href="./category.html" class="category-item py-1 px-4 text-align-center">
+                    <img src="./assets/imgs/category/tv.svg" alt="icon" width="50">
+                    <span class="d-block mt-1">دين</span>
+                </a>
+                <a href="./category.html" class="category-item py-1 px-4 text-align-center">
+                    <img src="./assets/imgs/category/watch.svg" alt="icon" width="50">
+                    <span class="d-block mt-1">تاريخ</span>
+                </a>
+                <a href="./category.html"   class="category-item py-1 px-4 text-align-center">
+                    <img src="./assets/imgs/category/keyboard.svg" alt="icon" width="50">
+                    <span class="d-block mt-1">روايات</span>
+                </a>
+                <a href="./category.html" class="category-item py-1 px-4 text-align-center">
+                    <img src="./assets/imgs/category/phoneCharger.svg" alt="icon" width="50">
+                    <span class="d-block mt-1">سياسة</span>
+                </a>
+                <a href="./category.html" class="category-item py-1 px-4 text-align-center">
+                    <img src="assets/imgs/category/homeWifi.svg" alt="icon" width="50">
+                    <span class="d-block mt-1">اقتصاد</span>
+                </a>
+                <a href="./category.html" class="category-item py-1 px-4 text-align-center">
+                    <img src="./assets/imgs/category/gamingHand.svg" alt="icon" width="50">
+                    <span class="d-block mt-1">طبخ</span>
+                </a>
+                <a href="./category.html" class="category-item py-1 px-4 text-align-center">
+                    <img src="./assets/imgs/category/@.svg" alt="arrow" width="50">
+                    <span class="d-block mt-1">تربية</span>
+                </a>
+            </div>
+            <button class="prev-btn">
+                <img
+                src="./assets/imgs/arrowNext.svg" alt="arrow" width="30px"
+                style="transform: rotate(180deg); margin-top: -20px" class="arrow" onclick="oneStepSlider('scrolled', 'prev', 0)"      
+                >
+            </button> 
+        </div>
+    </div>
+</section>
+<section class="adBanner-section py-2">
+    <div class="container">
+        <div class="d-grid g-lg-4 g-sm-2 g-1">
+            <div>
+                <img
+                    src=""
+                    id="advert1"
+                    alt=""
+                    class="advert"
+                >
+            </div>
+            <div>
+                <img
+                    src=""
+                    id="advert2"
+                    alt=""
+                    class="advert"
+                >
+            </div>
+            <div>
+                <img
+                    src=""
+                    id="advert3"
+                    alt=""
+                    class="advert"
+                >
+            </div>
+            <div>
+                <img
+                    src=""
+                    id="advert4"
+                    alt=""
+                    class="advert"
+                >
+            </div>
+            <div>
+                <img src="assets/imgs/sliders/slider8.jpg" alt="">
+            </div>
+        </div>
+        
+    </div>
+</section>
+<!-- end Reem section -->
+<!--  By:  hamad -->
+<section class="category-details-sections">
+    <div class="container">
+        <section class="category-details-row py-2">
+            <div class="section-top d-flex align-items-baseline justify-content-space-between">
+                <h2 class="h3 mb-1">العروض الحالية</h2>
+                <a href="./category.html">عرض الكل</a>
+            </div>
+            <div class="section-content d-flex">
+                <button class="next-btn">
+                    <img src="./assets/imgs/arrowNext.svg" alt="" width="40" class="arrow" onclick="oneStepSlider('scrolled', 'next', 1)" style="margin-top: -20px">
+                </button>
+                <div class="d-flex scrolled">
+                    <div class="card-item">
+                        <a href="./pages/details.html" class="link">
+                            <img src="./assets/imgs/books/كبرياء وهوى.jpg" alt="book img" width="100%">
+                        </a>
+                        <div class="card-body px-2 text-align-center">
+                            <h5 class="card-type">
+                                <img src="./assets/imgs/redBook.svg" alt="">
+                                كتاب الكتروني
+                            </h5>
+                            <p class="card-name">
+                                <a href="./pages/details.html">كبرياء وهوى(كتاب إلكتروني)</a>
+                            </p>
+                            <p class="price my-1">
+                                <span class="h3">17.99</span>
+                                .ر.س
+                                <br>
+                                <span class="include-tax">شامل الضريبة</span>
+                            </p>
+                            <p class="offer-left">
+                                <img
+                                        src="./assets/imgs/notification.svg"
+                                        alt="icon"
+                                        width="30"
+                                        class="pl-1"
+                                >
+                                متبقي على العرض
+                                <b></b>
+                                يوم
+                            </p>
+                        </div>
+                        <ul class="card-footer px-2 d-flex justify-content-space-between align-items-center">
+                            <li>
+                                <a href="#">
+                                    <img src="./assets/imgs/main.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="addProduct">
+                                    <img src="./assets/imgs/addProduct.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./assets/imgs/exchange.svg">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-item">
+                        <a href="./pages/details.html" class="link">
+                            <img src="./assets/imgs/books/behind strong.jpg" alt="book img" width="100%">
+                        </a>
+                        <div class="card-body px-2 text-align-center">
+                            <h5 class="card-type">
+                                <img src="./assets/imgs/redBook.svg" alt="">
+                                كتاب الكتروني
+                            </h5>
+                            <p class="card-name">
+                                <a href="./pages/details.html">خلف قوتي ضعف يحبك (كتاب إلكتروني)
+                                </a>
+                            </p>
+                            <p class="price my-1">
+                                <span class="h3">17.99</span>
+                                .ر.س
+                                <br>
+                                <span class="include-tax">شامل الضريبة</span>
+                            </p>
+                            <p class="offer-left">
+                                <img
+                                        src="./assets/imgs/notification.svg"
+                                        alt="icon"
+                                        width="30"
+                                        class="pl-1"
+                                >
+                                متبقي على العرض
+                                <b></b>
+                                يوم
+                            </p>
+                        </div>
+                        <ul class="card-footer px-2 d-flex justify-content-space-between align-items-center">
+                            <li>
+                                <a href="#">
+                                    <img src="./assets/imgs/main.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="addProduct">
+                                    <img src="./assets/imgs/addProduct.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./assets/imgs/exchange.svg">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-item">
+                        <a href="./pages/details.html" class="link">
+                            <img src="./assets/imgs/books/love book.jpg" alt="book img" width="100%">
+                        </a>
+                        <div class="card-body px-2 text-align-center">
+                            <h5 class="card-type">
+                                <img src="./assets/imgs/redBook.svg" alt="">
+                                كتاب الكتروني
+                            </h5>
+                            <p class="card-name">
+                                <a href="./pages/details.html">كتالوج الحب (كتاب إلكتروني)</a>
+                            </p>
+                            <p class="price my-1">
+                                <span class="h3">17.99</span>
+                                .ر.س
+                                <br>
+                                <span class="include-tax">شامل الضريبة</span>
+                            </p>
+                            <p class="offer-left">
+                                <img
+                                        src="./assets/imgs/notification.svg"
+                                        alt="icon"
+                                        width="30"
+                                        class="pl-1"
+                                >
+                                متبقي على العرض
+                                <b></b>
+                                يوم
+                            </p>
+                        </div>
+                        <ul class="card-footer px-2 d-flex justify-content-space-between align-items-center">
+                            <li>
+                                <a href="#">
+                                    <img src="./assets/imgs/main.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="addProduct js-cart">
+                                    <img src="./assets/imgs/addProduct.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./assets/imgs/exchange.svg">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-item">
+                        <a href="./pages/details.html" class="link">
+                            <img src="./assets/imgs/books/who take me.jpg" alt="book img" width="100%">
+                        </a>
+                        <div class="card-body px-2 text-align-center">
+                            <h5 class="card-type">
+                                <img src="./assets/imgs/redBook.svg" alt="">
+                                كتاب الكتروني
+                            </h5>
+                            <p class="card-name">
+                                <a href="./pages/details.html">إلى الذي أسرني حبه (كتاب إلكتروني)
+                                </a
+                                >
+                            </p>
+                            <p class="price my-1">
+                                <span class="h3">17.99</span>
+                                .ر.س
+                                <br>
+                                <span class="include-tax">شامل الضريبة</span>
+                            </p>
+                            <p class="offer-left">
+                                <img
+                                        src="./assets/imgs/notification.svg"
+                                        alt="icon"
+                                        width="30"
+                                        class="pl-1"
+                                >
+                                متبقي على العرض
+                                <b></b>
+                                يوم
+                            </p>
+                        </div>
+                        <ul class="card-footer px-2 d-flex justify-content-space-between align-items-center">
+                            <li>
+                                <a href="#">
+                                    <img src="./assets/imgs/main.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="addProduct">
+                                    <img src="./assets/imgs/addProduct.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./assets/imgs/exchange.svg">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-item">
+                        <a href="./pages/details.html" class="link">
+                            <img src="./assets/imgs/books/unexpected marriage.jpg" alt="book img" width="100%">
+                        </a>
+                        <div class="card-body px-2 text-align-center">
+                            <h5 class="card-type">
+                                <img src="./assets/imgs/redBook.svg" alt="">
+                                كتاب الكتروني
+                            </h5>
+                            <p class="card-name">
+                                <a href="./pages/details.html">زواج غير متوقع (كتاب إلكتروني)</a>
+                            </p>
+                            <p class="price my-1">
+                                <span class="h3">17.99</span>
+                                .ر.س
+                                <br>
+                                <span class="include-tax">شامل الضريبة</span>
+                            </p>
+                            <p class="offer-left">
+                                <img
+                                        src="./assets/imgs/notification.svg"
+                                        alt="icon"
+                                        width="30"
+                                        class="pl-1"
+                                >
+                                متبقي على العرض
+                                <b></b>
+                                يوم
+                            </p>
+                        </div>
+                        <ul class="card-footer px-2 d-flex justify-content-space-between align-items-center">
+                            <li>
+                                <a href="#">
+                                    <img src="./assets/imgs/main.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="addProduct js-cart">
+                                    <img src="./assets/imgs/addProduct.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./assets/imgs/exchange.svg">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="prev-btn">
+                    <img
+                            src="./assets/imgs/arrowNext.svg" alt="arrow" width="40px"
+                            style="transform: rotate(180deg); margin-top: -20px" class="arrow" onclick="oneStepSlider('scrolled', 'prev', 1)"
+                    >
+                </button>
+            </div>
+        </section>
+        <section class="category-details-row py-2">
+            <div class="section-top d-flex align-items-baseline justify-content-space-between">
+                <h2 class="h3 mb-1">الكتب الدينية</h2>
+                <a href="./category.html">عرض الكل</a>
+            </div>
+            <div class="section-content d-flex">
+                <button class="next-btn">
+                    <img src="./assets/imgs/arrowNext.svg" alt="" width="40" class="arrow" onclick="oneStepSlider('scrolled', 'next', 2)">
+                </button>
+                <div class="d-flex scrolled">
+                    <div class="card-item">
+                        <a href="./pages/details.html" class="link">
+                            <img src="./assets/imgs/books/كبرياء وهوى.jpg" alt="book img" width="100%">
+                        </a>
+                        <div class="card-body px-2 text-align-center">
+                            <h5 class="card-type">
+                                <img src="./assets/imgs/redBook.svg" alt="">
+                                كتاب الكتروني
+                            </h5>
+                            <p class="card-name">
+                                <a href="./pages/details.html">كبرياء وهوى(كتاب إلكتروني)</a>
+                            </p>
+                            <p class="price my-1">
+                                <span class="h3">17.99</span>
+                                .ر.س
+                                <br>
+                                <span class="include-tax">شامل الضريبة</span>
+                            </p>
+                        </div>
+                        <ul class="card-footer px-2 d-flex justify-content-space-between align-items-center">
+                            <li>
+                                <a href="#">
+                                    <img src="./assets/imgs/main.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="addProduct">
+                                    <img src="./assets/imgs/addProduct.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./assets/imgs/exchange.svg">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-item">
+                        <a href="./pages/details.html" class="link">
+                            <img src="./assets/imgs/books/behind strong.jpg" alt="book img" width="100%">
+                        </a>
+                        <div class="card-body px-2 text-align-center">
+                            <h5 class="card-type">
+                                <img src="./assets/imgs/redBook.svg" alt="">
+                                كتاب الكتروني
+                            </h5>
+                            <p class="card-name">
+                                <a href="./pages/details.html">خلف قوتي ضعف يحبك (كتاب إلكتروني)
+                                </a>
+                            </p>
+                            <p class="price my-1">
+                                <span class="h3">17.99</span>
+                                .ر.س
+                                <br>
+                                <span class="include-tax">شامل الضريبة</span>
+                            </p>
+                        </div>
+                        <ul class="card-footer px-2 d-flex justify-content-space-between align-items-center">
+                            <li>
+                                <a href="#">
+                                    <img src="./assets/imgs/main.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="addProduct">
+                                    <img src="./assets/imgs/addProduct.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./assets/imgs/exchange.svg">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-item">
+                        <a href="./pages/details.html" class="link">
+                            <img src="./assets/imgs/books/love book.jpg" alt="book img" width="100%">
+                        </a>
+                        <div class="card-body px-2 text-align-center">
+                            <h5 class="card-type">
+                                <img src="./assets/imgs/redBook.svg" alt="">
+                                كتاب الكتروني
+                            </h5>
+                            <p class="card-name">
+                                <a href="./pages/details.html">كتالوج الحب (كتاب إلكتروني)</a>
+                            </p>
+                            <p class="price my-1">
+                                <span class="h3">17.99</span>
+                                .ر.س
+                                <br>
+                                <span class="include-tax">شامل الضريبة</span>
+                            </p>
+                        </div>
+                        <ul class="card-footer px-2 d-flex justify-content-space-between align-items-center">
+                            <li>
+                                <a href="#">
+                                    <img src="./assets/imgs/main.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="addProduct js-cart">
+                                    <img src="./assets/imgs/addProduct.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./assets/imgs/exchange.svg">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-item">
+                        <a href="./pages/details.html" class="link">
+                            <img src="./assets/imgs/books/who take me.jpg" alt="book img" width="100%">
+                        </a>
+                        <div class="card-body px-2 text-align-center">
+                            <h5 class="card-type">
+                                <img src="./assets/imgs/redBook.svg" alt="">
+                                كتاب الكتروني
+                            </h5>
+                            <p class="card-name">
+                                <a href="./pages/details.html">إلى الذي أسرني حبه (كتاب إلكتروني)
+                                </a
+                                >
+                            </p>
+                            <p class="price my-1">
+                                <span class="h3">17.99</span>
+                                .ر.س
+                                <br>
+                                <span class="include-tax">شامل الضريبة</span>
+                            </p>
+                        </div>
+                        <ul class="card-footer px-2 d-flex justify-content-space-between align-items-center">
+                            <li>
+                                <a href="#">
+                                    <img src="./assets/imgs/main.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="addProduct">
+                                    <img src="./assets/imgs/addProduct.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./assets/imgs/exchange.svg">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-item">
+                        <a href="./pages/details.html" class="link">
+                            <img src="./assets/imgs/books/unexpected marriage.jpg" alt="book img" width="100%">
+                        </a>
+                        <div class="card-body px-2 text-align-center">
+                            <h5 class="card-type">
+                                <img src="./assets/imgs/redBook.svg" alt="">
+                                كتاب الكتروني
+                            </h5>
+                            <p class="card-name">
+                                <a href="./pages/details.html">زواج غير متوقع (كتاب إلكتروني)</a>
+                            </p>
+                            <p class="price my-1">
+                                <span class="h3">17.99</span>
+                                .ر.س
+                                <br>
+                                <span class="include-tax">شامل الضريبة</span>
+                            </p>
+                        </div>
+                        <ul class="card-footer px-2 d-flex justify-content-space-between align-items-center">
+                            <li>
+                                <a href="#">
+                                    <img src="./assets/imgs/main.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="addProduct js-cart">
+                                    <img src="./assets/imgs/addProduct.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./assets/imgs/exchange.svg">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="prev-btn">
+                    <img
+                            src="./assets/imgs/arrowNext.svg" alt="arrow" width="40px"
+                            style="transform: rotate(180deg); margin-top: -20px" class="arrow" onclick="oneStepSlider('scrolled', 'prev', 2)"
+                    >
+                </button>
+            </div>
+        </section>
+        <section class="category-details-row py-2">
+            <div class="section-top d-flex align-items-baseline justify-content-space-between">
+                <h2 class="h3 mb-1">الكتب التاريخية</h2>
+                <a href="./category.html">عرض الكل</a>
+            </div>
+            <div class="section-content d-flex">
+                <button class="next-btn">
+                    <img src="./assets/imgs/arrowNext.svg" alt="" width="40" class="arrow" onclick="oneStepSlider('scrolled', 'next', 2)">
+                </button>
+                <div class="d-flex scrolled">
+                    <div class="card-item">
+                        <a href="./pages/details.html" class="link">
+                            <img src="./assets/imgs/books/كبرياء وهوى.jpg" alt="book img" width="100%">
+                        </a>
+                        <div class="card-body px-2 text-align-center">
+                            <h5 class="card-type">
+                                <img src="./assets/imgs/redBook.svg" alt="">
+                                كتاب الكتروني
+                            </h5>
+                            <p class="card-name">
+                                <a href="./pages/details.html">كبرياء وهوى(كتاب إلكتروني)</a>
+                            </p>
+                            <p class="price my-1">
+                                <span class="h3">17.99</span>
+                                .ر.س
+                                <br>
+                                <span class="include-tax">شامل الضريبة</span>
+                            </p>
+                        </div>
+                        <ul class="card-footer px-2 d-flex justify-content-space-between align-items-center">
+                            <li>
+                                <a href="#">
+                                    <img src="./assets/imgs/main.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="addProduct">
+                                    <img src="./assets/imgs/addProduct.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./assets/imgs/exchange.svg">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-item">
+                        <a href="./pages/details.html" class="link">
+                            <img src="./assets/imgs/books/behind strong.jpg" alt="book img" width="100%">
+                        </a>
+                        <div class="card-body px-2 text-align-center">
+                            <h5 class="card-type">
+                                <img src="./assets/imgs/redBook.svg" alt="">
+                                كتاب الكتروني
+                            </h5>
+                            <p class="card-name">
+                                <a href="./pages/details.html">خلف قوتي ضعف يحبك (كتاب إلكتروني)
+                                </a>
+                            </p>
+                            <p class="price my-1">
+                                <span class="h3">17.99</span>
+                                .ر.س
+                                <br>
+                                <span class="include-tax">شامل الضريبة</span>
+                            </p>
+                        </div>
+                        <ul class="card-footer px-2 d-flex justify-content-space-between align-items-center">
+                            <li>
+                                <a href="#">
+                                    <img src="./assets/imgs/main.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="addProduct">
+                                    <img src="./assets/imgs/addProduct.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./assets/imgs/exchange.svg">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-item">
+                        <a href="./pages/details.html" class="link">
+                            <img src="./assets/imgs/books/love book.jpg" alt="book img" width="100%">
+                        </a>
+                        <div class="card-body px-2 text-align-center">
+                            <h5 class="card-type">
+                                <img src="./assets/imgs/redBook.svg" alt="">
+                                كتاب الكتروني
+                            </h5>
+                            <p class="card-name">
+                                <a href="./pages/details.html">كتالوج الحب (كتاب إلكتروني)</a>
+                            </p>
+                            <p class="price my-1">
+                                <span class="h3">17.99</span>
+                                .ر.س
+                                <br>
+                                <span class="include-tax">شامل الضريبة</span>
+                            </p>
+                        </div>
+                        <ul class="card-footer px-2 d-flex justify-content-space-between align-items-center">
+                            <li>
+                                <a href="#">
+                                    <img src="./assets/imgs/main.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="addProduct js-cart">
+                                    <img src="./assets/imgs/addProduct.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./assets/imgs/exchange.svg">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-item">
+                        <a href="./pages/details.html" class="link">
+                            <img src="./assets/imgs/books/who take me.jpg" alt="book img" width="100%">
+                        </a>
+                        <div class="card-body px-2 text-align-center">
+                            <h5 class="card-type">
+                                <img src="./assets/imgs/redBook.svg" alt="">
+                                كتاب الكتروني
+                            </h5>
+                            <p class="card-name">
+                                <a href="./pages/details.html">إلى الذي أسرني حبه (كتاب إلكتروني)
+                                </a
+                                >
+                            </p>
+                            <p class="price my-1">
+                                <span class="h3">17.99</span>
+                                .ر.س
+                                <br>
+                                <span class="include-tax">شامل الضريبة</span>
+                            </p>
+                        </div>
+                        <ul class="card-footer px-2 d-flex justify-content-space-between align-items-center">
+                            <li>
+                                <a href="#">
+                                    <img src="./assets/imgs/main.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="addProduct">
+                                    <img src="./assets/imgs/addProduct.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./assets/imgs/exchange.svg">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-item">
+                        <a href="./pages/details.html" class="link">
+                            <img src="./assets/imgs/books/unexpected marriage.jpg" alt="book img" width="100%">
+                        </a>
+                        <div class="card-body px-2 text-align-center">
+                            <h5 class="card-type">
+                                <img src="./assets/imgs/redBook.svg" alt="">
+                                كتاب الكتروني
+                            </h5>
+                            <p class="card-name">
+                                <a href="./pages/details.html">زواج غير متوقع (كتاب إلكتروني)</a>
+                            </p>
+                            <p class="price my-1">
+                                <span class="h3">17.99</span>
+                                .ر.س
+                                <br>
+                                <span class="include-tax">شامل الضريبة</span>
+                            </p>
+                        </div>
+                        <ul class="card-footer px-2 d-flex justify-content-space-between align-items-center">
+                            <li>
+                                <a href="#">
+                                    <img src="./assets/imgs/main.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="addProduct js-cart">
+                                    <img src="./assets/imgs/addProduct.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./assets/imgs/exchange.svg">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="prev-btn">
+                    <img
+                            src="./assets/imgs/arrowNext.svg" alt="arrow" width="40px"
+                            style="transform: rotate(180deg); margin-top: -20px" class="arrow" onclick="oneStepSlider('scrolled', 'prev', 2)"
+                    >
+                </button>
+            </div>
+        </section>
+    </div>
+</section>
+
+<!--    end hamad-->
+      <!--start wafa -->
         <footer class="mt-2">
             <div class="container mb-2">
                 <div class="flex-col md-dir-row justify-content-space-between">
@@ -171,6 +1127,7 @@
             </div>
         </footer>
         <!--end wafa-->
+
     </body>
-    </html>
-    
+</html>
+
