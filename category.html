@@ -9,9 +9,75 @@
 		<link rel="stylesheet" href="assets/css/all.min.css">
 	</head>
 	<body>
-
-		<nav class="main-nav d-lg-block" id="main-nav">
-			<div class="container">
+	<nav class="main-nav d-lg-block" id="main-nav">
+		<div class="container">
+			<ul class="row align-content-center justify-content-space-between">
+				<li>
+					<img src="assets/imgs/register.svg">
+					<b>
+						<span onclick="openModal('signup-login-modal', 'loginForm')">
+							ادخل لحسابك
+						</span>
+						أو
+						<span onclick="openModal('signup-login-modal', 'signupForm')">
+							سجل الآن
+						</span>
+					</b>
+				</li>
+				<li>
+					<a href="#">
+						<img src="assets/imgs/main.svg">
+						الرئيسية
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="assets/imgs/who.svg">
+						من نحن
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="assets/imgs/warranty.svg">
+						اتصل بنا
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="assets/imgs/help.svg">
+						المساعدة
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="assets/imgs/privacy.svg">
+						سياسة الخصوصية
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="assets/imgs/saudi.svg">
+						YER اليمن
+					</a>
+				</li>
+				<li class="change-language">
+					<a href="#">
+						<span>English</span>
+						<img src="assets/imgs/language.svg">
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div id="signup-login-modal" class="modal">
+		<div id="signup-login-modal-content" class="modal-content col-xs-9 col-sm-8 col-md-6 col-lg-4"></div>
+	</div>
+	<div id="top-header" class="top-header py-1 relative">  
+		<div class="container d-grid g-10">
+			<div class="toggle d-lg-none align-self-center">
+				<img src="assets/imgs/menubar.svg" alt="icon" width="20">
+			</div>
+			<nav class="mobile-nav d-none d-none d-lg-none">
 				<ul class="row align-content-center justify-content-space-between">
 					<li>
 						<img src="assets/imgs/register.svg">
@@ -68,158 +134,90 @@
 						</a>
 					</li>
 				</ul>
+			</nav>
+			<div class="text-align-center">
+				<a href="index.html" class="logo">
+					<img src="assets/imgs/logo.png" alt="">
+				</a>
 			</div>
-		</nav>
-		<div id="signup-login-modal" class="modal">
-			<div id="signup-login-modal-content" class="modal-content col-xs-9 col-sm-8 col-md-6 col-lg-4"></div>
-		</div>
-		<div id="top-header" class="top-header py-1 relative">  
-			<div class="container d-grid g-10">
-				<div class="toggle d-lg-none align-self-center">
-					<img src="assets/imgs/menubar.svg" alt="icon" width="20">
-				</div>
-				<nav class="mobile-nav d-none d-none d-lg-none">
-					<ul class="row align-content-center justify-content-space-between">
-						<li>
-							<img src="assets/imgs/register.svg">
-							<b>
-								<span onclick="openModal('signup-login-modal', 'loginForm')">
-									ادخل لحسابك
-								</span>
-								أو
-								<span onclick="openModal('signup-login-modal', 'signupForm')">
-									سجل الآن
-								</span>
-							</b>
-						</li>
-						<li>
-							<a href="#">
-								<img src="assets/imgs/main.svg">
-								الرئيسية
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="assets/imgs/who.svg">
-								من نحن
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="assets/imgs/warranty.svg">
-								اتصل بنا
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="assets/imgs/help.svg">
-								المساعدة
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="assets/imgs/privacy.svg">
-								سياسة الخصوصية
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="assets/imgs/saudi.svg">
-								YER اليمن
-							</a>
-						</li>
-						<li class="change-language">
-							<a href="#">
-								<span>English</span>
-								<img src="assets/imgs/language.svg">
-							</a>
-						</li>
-					</ul>
-				</nav>
-				<div class="text-align-center">
-					<a href="index.html" class="logo">
-						<img src="assets/imgs/logo.png" alt="">
-					</a>
-				</div>
-				<form action="" class="d-flex">
-					<label for="header_search"></label>
-					<input
-						onkeyup="search_book()"
-						id="header_search"
-						type="search"
-						name="header_search"
-						placeholder="البحث"
-						class="w-100"
-					>
-					<button type="submit" name="header_search_submit">
-						<i class="fas fa-search"></i>
-					</button>
-				</form>
-				<div class="text-align-center">
-					<a class="cart-btn" href="pages/cart.html">
-						<img src="assets/imgs/cart.svg">
-						<!-- <span class="cart-quantity" id="cart-quantity">0</span> -->
-					</a>
-				</div>  
+			<form action="" class="d-flex">
+				<label for="header_search"></label>
+				<input
+					onkeyup="search_book()"
+					id="header_search"
+					type="search"
+					name="header_search"
+					placeholder="البحث"
+					class="w-100"
+				>
+				<button type="submit" name="header_search_submit">
+					<i class="fas fa-search"></i>
+				</button>
+			</form>
+			<div class="text-align-center">
+				<a class="cart-btn" href="pages/cart.html">
+					<img src="assets/imgs/cart.svg">
+					<!-- <span class="cart-quantity" id="cart-quantity">0</span> -->
+				</a>
 			</div>  
-		</div>
-    <!-- Start wafa -->
+		</div>  
+	</div>
     <div class="category-section">
-			<div class="container">
-				<ul class="breadcrumb d-flex">
-					<li><a href="index.html">الرئيسية</a></li>
-					<li><a href="#">الكتب العربية</a></li>
-					<li><a href="#">كتب إلكترونية</a></li>
-					<li>لأنك الله (كتاب إلكتروني)</li>
-				</ul>
-        <!-- End wafa -->
-		<!-- start Reem section  -->
-		<div class="row justify-content-center md-justify-content-space-between">
-			<div class="col-12 col-sm-6 col-md-3 col-lg-3 mb-2">
-				<div class="category-name">
-					<h4><img src="assets/imgs/green-book.svg" alt="icon" width="30">
-						كتاب إلكتروني
-					</h4>
-				</div>
-				<div class="filter-box">
-					<div class="filter-header p-1">تصفية النتائج</div>
-					<div idi="filter-accordion" class="filter-accordion">
-						<div class="accordion-item close">
-							<div class="accordion-header d-flex justify-content-space-between" id="headingOne">
-								<span>علامة تجارية</span>
-								<span class="fa fa-plus fs-sm"></span>
-							</div>
-							<div class="accordion-content">
-								Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, velit?
-							</div>
-						</div>
-						<div class="accordion-item open">
-							<div class="accordion-header d-flex justify-content-space-between" id="headingOne">
-								<span>السعر</span>
-								<span class="fa fa-minus fs-sm"></span>
-							</div>
-							<div class="accordion-content">
-								<input type="range" name="filterPrice" id="">
-								<div class="range-sides d-flex justify-content-space-between">
-									<span class="start">0ر.س</span>
-									<span class="end">150ر.س</span>
+		<div class="container">
+			<!-- Start wafa -->
+			<ul class="breadcrumb d-flex">
+				<li><a href="index.html">الرئيسية</a></li>
+				<li><a href="#">الكتب العربية</a></li>
+				<li><a href="#">كتب إلكترونية</a></li>
+				<li>لأنك الله (كتاب إلكتروني)</li>
+			</ul>
+        	<!-- End wafa -->
+			<!-- start Reem section  -->
+			<div class="row justify-content-center md-justify-content-space-between">
+				<div class="col-12 col-sm-6 col-md-3 col-lg-3 mb-2">
+					<div class="category-name">
+						<h4><img src="assets/imgs/green-book.svg" alt="icon" width="30">
+							كتاب إلكتروني
+						</h4>
+					</div>
+					<div class="filter-box">
+						<div class="filter-header p-1">تصفية النتائج</div>
+						<div idi="filter-accordion" class="filter-accordion">
+							<div class="accordion-item close">
+								<div class="accordion-header d-flex justify-content-space-between" id="headingOne">
+									<span>علامة تجارية</span>
+									<span class="fa fa-plus fs-sm"></span>
+								</div>
+								<div class="accordion-content">
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, velit?
 								</div>
 							</div>
-						</div>
-						<div class="accordion-item close">
-							<div class="accordion-header d-flex justify-content-space-between" id="headingOne">
-								<span>صيغة الكتاب</span>
-								<span class="fa fa-plus fs-sm"></span>
+							<div class="accordion-item open">
+								<div class="accordion-header d-flex justify-content-space-between" id="headingOne">
+									<span>السعر</span>
+									<span class="fa fa-minus fs-sm"></span>
+								</div>
+								<div class="accordion-content">
+									<input type="range" name="filterPrice" id="">
+									<div class="range-sides d-flex justify-content-space-between">
+										<span class="start">0ر.س</span>
+										<span class="end">150ر.س</span>
+									</div>
+								</div>
 							</div>
-							<div class="accordion-content">
-								Lorem ipsum dolor sit amet.
+							<div class="accordion-item close">
+								<div class="accordion-header d-flex justify-content-space-between" id="headingOne">
+									<span>صيغة الكتاب</span>
+									<span class="fa fa-plus fs-sm"></span>
+								</div>
+								<div class="accordion-content">
+									Lorem ipsum dolor sit amet.
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			</div>
-
 			<!-- end Reem section -->
 		<footer class="mt-2">
 			<div class="container mb-2">
