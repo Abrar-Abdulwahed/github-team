@@ -4,7 +4,7 @@ https://abrar-abdulwahed.github.io/github-team/
 
 ##
 
-Team: Abrar, Afnan, Reem, Hama, Wafa. <br/>
+Team: Abrar, Afnan, Reem, Hamad, Wafa. <br/>
 
 # Afnan
 
